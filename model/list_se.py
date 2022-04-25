@@ -4,6 +4,7 @@ from model.student import Student
 class ListSE:
     def __init__(self):
         self.head = None
+        self.count=0
 
 
     def add(self,data):
@@ -44,6 +45,34 @@ class ListSE:
             temp =temp.next
         return False
 
-    
+    def add_to_position(self, position: int, student: Student):
+        if position > 0 and position <= (self.count + 1):
+            if position == 1:
+                new_node = Node(student)
+                new_node.next = self.head
+                self.head = new_node
+            else:
+                temp = self.head
+                count = 1
+                while temp != None:
+                    if count == position - 1:
+                        new_node = Node(student)
+                        new_node.next = temp.next
+                        temp.next = new_node
+                        self.count = +1
+                        break
+                    temp = temp.next
+                    count = +1
+            self.count = +1
+        else:
+            raise Exception("La posición no es válida")
 
-
+    def insert_at_end(self, data):
+        new_node = Node(data)
+        if self.head is None:
+            self.head = new_node
+            return
+        n= self.head_node
+        while n.ref is not None:
+            n = n.next
+        n.next = new_node;

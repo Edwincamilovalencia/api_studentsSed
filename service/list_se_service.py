@@ -1,5 +1,6 @@
 from model.student import Student
 from model.list_se import ListSE
+from model.node import Node
 
 class ListSEService:
     cities = ["manizales", "pereira", "chinchina", "armenia"]
@@ -33,6 +34,12 @@ class ListSEService:
             self.students.invert()
             return {"message":" se ha invertido la lista " }
 
+    def add_to_position(self,position,Student):
+        try:
+            self.students.add_to_position(position,(Student))
+            return {"message":"Adicionado con éxito"}
+        except Exception as e:
+            return {"message": str(e)}
 
 
 

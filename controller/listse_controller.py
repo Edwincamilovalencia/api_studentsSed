@@ -47,5 +47,8 @@ def invert():
     return Response(status=200,
                     response=json.dumps(list_se_service.invert()),mimetype="application/json")
 
-
-
+@app_list_se.route("/listse/toposition/<position>",methods=["POST"])
+def add_to_position(position):
+    return Response(status=200,
+                    response=json.dumps(list_se_service.add_to_position(int(position),request.json)),
+                    mimetype="application/json")
