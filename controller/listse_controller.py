@@ -52,3 +52,21 @@ def add_to_position(position):
     return Response(status=200,
                     response=json.dumps(list_se_service.add_to_position(int(position),request.json)),
                     mimetype="application/json")
+
+@app_list_se.route('/list_se/addtoend',methods=['POST'])
+def insert_at_end():
+    data = request.json
+    try:
+        list_se_service.insert_at_end(data)
+        return Response(status=200,response=json.dumps({"message":"Adicionado exitosamente"}),
+                        mimetype="application/json")
+#ciudad no valida
+    except Exception as e:
+        return Response(status=409, response=json.dumps({"message": str(e)}),
+                        mimetype="application/json")
+
+
+
+
+
+

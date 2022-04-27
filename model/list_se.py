@@ -72,7 +72,14 @@ class ListSE:
         if self.head is None:
             self.head = new_node
             return
-        n= self.head_node
-        while n.ref is not None:
+        n=self.head
+        while n.next is not None:
             n = n.next
-        n.next = new_node;
+        n.next = new_node
+
+
+
+
+
+
+

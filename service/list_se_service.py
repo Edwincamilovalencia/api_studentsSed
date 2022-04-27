@@ -43,4 +43,9 @@ class ListSEService:
 
 
 
-
+    def insert_at_end(self,data):
+        student = Student(data)
+        if data["city"] in self.cities:
+            self.students.insert_at_end(student)
+        else:
+            raise Exception("la ciudad no es valida")
