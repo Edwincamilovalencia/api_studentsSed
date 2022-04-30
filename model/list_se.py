@@ -82,8 +82,6 @@ class ListSE:
         n.next = new_node
 
 #
-    #####
-
     def delate_student(self,id):
         if id == self.head.data.identification:
             self.head=self.head.next
@@ -109,7 +107,7 @@ class ListSE:
             temp = temp.next
 
 #
-    def group_by_gender(self):
+    def woman_first(self):
         list_cp = ListSE()
         temp = self.head
         while temp != None:
@@ -127,7 +125,7 @@ class ListSE:
         W=0
         list_cp_man = ListSE()
         list_cp_women = ListSE()
-        list_cp_bought_genders = ListSE()
+        list_cp_intercalate_genders = ListSE()
         temp = self.head
         while temp != None:
             if temp.data.gender == 1:
@@ -151,15 +149,15 @@ class ListSE:
 
             if tempW != None:
                 if tempW.data != None:
-                    list_cp_bought_genders.add(tempW.data)
+                    list_cp_intercalate_genders.add(tempW.data)
                     tempW = tempW.next
 
             if tempM != None:
                 if tempM.data != None:
-                    list_cp_bought_genders.add(tempM.data)
+                    list_cp_intercalate_genders.add(tempM.data)
                     tempM = tempM.next
             MayorLongitud = MayorLongitud-1
-        self.head = list_cp_bought_genders.head
+        self.head = list_cp_intercalate_genders.head
 
 
 

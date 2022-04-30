@@ -58,11 +58,11 @@ class ListSEService:
         return{"message":"eliminado correctamente "}
 
 #
-    def group_by_gender(self):
+    def woman_first(self):
         if self.students.head== None:
             return {"message":" no hay datos "}
         else:
-            self.students.group_by_gender()
+            self.students.woman_first()
             return {"message":"colocacion mujeres primero correctamente"}
 
 

@@ -89,9 +89,9 @@ def eliminate_student_position(position):
 
 #
 @app_list_se.route('/list_se/woman_firts')
-def group_by_gender():
+def woman_first():
     return Response(status=200,
-                    response=json.dumps(list_se_service.group_by_gender()),
+                    response=json.dumps(list_se_service.woman_first()),
                     mimetype="application/json")
 
 
