@@ -5,8 +5,12 @@ from model.node import Node
 class ListSEService:
     cities = ["manizales", "pereira", "chinchina", "armenia"]
 
+
+    operators = ["claro", "movistar", "tigo"]
+
     def __init__(self):
         self.students=ListSE()
+
 
     def get_all_students(self):
         return self.students.head
@@ -75,6 +79,14 @@ class ListSEService:
 
 
 
+###### ##### ejercicio sobre dejar primero studiante claro luego movistar, luego tigo
+
+    def operators_order(self):
+        if self.students.head== None:
+            return {"message":" no hay datos "}
+        else:
+            self.students.operators_order()
+            return {"message":"ordenamiento de operadores correctamente"}
 
 
 

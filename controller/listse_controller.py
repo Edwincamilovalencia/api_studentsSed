@@ -105,3 +105,13 @@ def group_intercalate():
 
 
 
+
+#####
+@app_list_se.route('/list_se/operators_order')
+def operators_order():
+    return Response(status=200,
+                    response=json.dumps(list_se_service.operators_order()),
+                    mimetype="application/json")
+
+
+

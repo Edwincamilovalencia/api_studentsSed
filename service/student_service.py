@@ -8,7 +8,7 @@ class StudentService:
 
     def __init__(self):
         self.students = []
-        carloaiza = Student({"idenfication":"75147236","name":"Carlos"})
+        carloaiza = Student({"idenfication":"75147236","name":"Carlos","operator":"claro"})
         self.students.append(carloaiza)
 
 
@@ -105,6 +105,14 @@ class StudentService:
             else:
                 dict_cities[student.city][1] = dict_cities[student.city][1] + 1
         return dict_cities
+
+    def operators_order(self):
+        dict_operator={}
+        for operator in self.operators_order():
+            dict_operator[operator]=[0,0]
+        return dict_operator
+
+
 
 
 

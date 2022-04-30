@@ -159,6 +159,25 @@ class ListSE:
             MayorLongitud = MayorLongitud-1
         self.head = list_cp_intercalate_genders.head
 
+##### ejercicio sobre dejar primero studiante claro luego movistar, luego tigo
+
+
+    def operators_order(self):
+        list_cp = ListSE()
+        temp = self.head
+
+        while temp != None:
+            if temp.data.operators == 1:
+                list_cp.add_to_start(temp.data)
+            if temp.data.gender == 2:
+                list_cp.add(temp.data)
+            if temp.data.gender == 3:
+                list_cp.add(temp.data)
+            temp = temp.next
+        self.head = list_cp.head
+
+
+
 
 
 
