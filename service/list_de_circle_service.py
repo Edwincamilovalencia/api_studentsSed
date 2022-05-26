@@ -7,7 +7,6 @@ class List_DE_CRService:
     def _init_(self):
         self.students=List_DE_CRService()
 
-#adicionar
     def add_de_circle(self,data:Student):
         student = Student(data)
         if data["city"] in self.cities:
@@ -15,7 +14,6 @@ class List_DE_CRService:
         else:
             raise Exception("la ciudad no es valida")
 
-#adicionar al inicio
     def add_to_start_circular_de(self, data):
         student = Student(data)
         if data["city"] in self.cities:
@@ -23,6 +21,5 @@ class List_DE_CRService:
         else:
             raise Exception("la ciudad no es valida")
 
-#listar
     def get_all_students_circular_de(self):
         return self.students.get_all_students_circular_de()

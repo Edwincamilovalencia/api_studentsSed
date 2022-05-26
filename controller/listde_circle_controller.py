@@ -7,7 +7,7 @@ app_list_de_circle = Blueprint("app_list_de_circle",__name__)
 list_de_circle_service = List_DE_CRService()
 
 
-#Adicionar
+
 @app_list_de_circle.route('/list_de_circle', methods=['POST'])
 def add_de_circle():
     try:
@@ -21,7 +21,7 @@ def add_de_circle():
                         response=json.dumps({"message": str(error)}),
                         mimetype="application/json")
 
-#adicionar al inicio
+
 @app_list_de_circle.route('/list_de_circular/addtostart',methods=['POST'])
 def add_to_start_circular_de():
     try:
@@ -35,7 +35,6 @@ def add_to_start_circular_de():
                         response=json.dumps({"message": str(error)}),
                         mimetype="application/json")
 
-#listar
 @app_list_de_circle.route('/list_de_circle/all')
 def get_all_students_circular_de():
 

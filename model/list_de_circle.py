@@ -7,14 +7,14 @@ class list_circle_de:
         self.head=None
         self.last=None
 
-#Validar existencia
+
     def empty(self):
         if self.head==None:
             return True
         else:
             return False
 
-#Agregar
+
     def add_de_circle(self,data):
         if self.empty():
             self.head=self.last=NodeDE(data)
@@ -22,9 +22,6 @@ class list_circle_de:
             temp=self.last
             self.last=temp.next=NodeDE(data)
             self.last.previous=temp
-
-#Agregar al inicio
-
 
     def add_to_start_circular_de(self,data):
         if self.empty():
@@ -35,7 +32,6 @@ class list_circle_de:
             self.head.previous=temp
             self.head=temp
 
-#listar
     def get_all_students_circular_de(self):
         list = []
         temp = self.head
